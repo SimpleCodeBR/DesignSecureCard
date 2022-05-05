@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form name="frmPAN" method="post" id="frmPAN">
+            <input type="hidden" name="codT" id="codT" />
+            <input type="hidden" name="txtPAN_val" id="txtPAN_val" />
+            <input type="hidden" name="hidCodigoIdioma" id="hidCodigoIdioma" />
+            <div id="support-text"></div>
+            <div id="card-number">
+                <input id="txtPAN" name="txtPAN" autocomplete="off" type="text" />
+            </div>
+            <div id="validity-card">
+                <input id="validityPAN" name="validityPAN" autocomplete="off" type="text" />
+            </div>
+            <div id="cvv2-field">
+                <input id="cvv2" name="cvv2" autocomplete="off" type="text" maxlength="3" />
+            </div>
+            <input type="submit" name="btnSubmit" value="Send" id="btnSubmit" asp-page-handler="Post" />
+            <div id="loading" class="loadingValidade">
+                <img id="img_loading" class="loadingValidade" src="imagens/loading-transparent.gif" style="border-width:0px;display:none;" />
+            </div>
+            <div id="error-message">
+                <span id="ValidadorPAN" class="erro">Mandatory field.</span>
+            </div>
+        </form>
+        <div id="formSubmit">
+        </div>
+        <span id="txtStatus" class="erro">Expiration date is in an incorrect format</span>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
